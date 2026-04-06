@@ -1,7 +1,12 @@
 {
-    "liveServer.settings.port": 0
-    ,"workbench.editor.enablePreview": false,
-    "editor.stickyScroll.enabled": false,
-    "files.autoSave": "afterDelay",
-    "github.copilot.enable": false,
+  "liveServer.settings.port": 0,
+  "workbench.editor.enablePreview": false,
+  "editor.stickyScroll.enabled": false,
+  "files.autoSave": "afterDelay",
+  "github.copilot.enable": {
+    "*": false
+  },
+  "editor.quickSuggestions": false,
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.inlineSuggest.enabled": false
 }
