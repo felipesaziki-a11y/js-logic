@@ -3,10 +3,11 @@
   "workbench.editor.enablePreview": false,
   "editor.stickyScroll.enabled": false,
   "files.autoSave": "afterDelay",
-  "github.copilot.enable": {
-    "*": false
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
   },
-  "editor.quickSuggestions": false,
   "editor.suggestOnTriggerCharacters": false,
   "editor.inlineSuggest.enabled": false
 }

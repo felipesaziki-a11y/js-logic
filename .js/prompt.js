@@ -42,3 +42,30 @@ function exemplo3(){
     let idade = anoAtual - anoNasc;
     alert("Idade: " + idade + " anos")
 }
+function conta(){
+    let dia = parseInt(prompt("Digite dia"));
+    let mes = parseInt(prompt("Digite mês"));
+    let ano = parseInt(prompt("Digite ano"));
+    let dataDeNascimento = (dia + "/" + mes + "/" + ano)
+    if (ano <= 2018) {
+        alert(dataDeNascimento + "\n" + "Olá")
+    } else {
+        alert(dataDeNascimento + "\n" + "Acesso negado")
+    }
+}
+
+/* Tabela 
+V V = V
+V F = F
+F V = F
+F F = F
+*/
+
+/* =: Igual
+==: Igual a tipo
+===: Igual a número e tipo
+<=: Menor ou igual
+>=: Maior ou igual
+<: Menor que
+>: Maior que
+*/
