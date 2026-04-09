@@ -46,12 +46,83 @@ function conta(){
     let dia = parseInt(prompt("Digite dia"));
     let mes = parseInt(prompt("Digite mês"));
     let ano = parseInt(prompt("Digite ano"));
+    let diaAt = new Date().getDay();
+    let mesAt = new Date().getMonth();
     let dataDeNascimento = (dia + "/" + mes + "/" + ano)
-    if (ano <= 2018) {
+    if (ano <= 2018 && mes <= mesAt && dia <= diaAt) {
         alert(dataDeNascimento + "\n" + "Olá")
     } else {
         alert(dataDeNascimento + "\n" + "Acesso negado")
     }
+}
+function sad(){
+    let humor = parseInt(prompt("Seu humor de 1 à 10"));
+    if (humor >= 6 && humor <= 10) {
+        categoria = "Feliz :)"
+    } else if (humor <= 5 && humor >= 1) {
+        categoria = "Triste :("
+    } else {
+        alert("Insira um valor compatível")
+    } 
+    alert(categoria)
+}
+
+function exemploLoja(){
+    let nome1 = prompt("Digite nome do jogo");
+    let categoria1 = prompt("Digite a categoria do jogo");
+    let precoBase1 = 200.99;
+
+    let precoComDesconto1 = 0;
+    let percentualDesconto1 = 0;
+    let precoDesconto1 = 0;
+
+    let nome2 = prompt("Digite nome do jogo 2");
+    let categoria2 = prompt("Digite a categoria 2");
+    let precoBase2 = 250.99;
+
+    let precoComDesconto2 = 0;
+    let percentualDesconto2 = 0;
+    let precoDesconto2 = 0;
+
+    if ((categoria1 === "Moba") || (categoria1 === "Fps")){
+        percentualDesconto1 = 0.25;
+        precoDesconto1 = precoBase1 * percentualDesconto1;
+        precoComDesconto1 = precoBase1 - precoDesconto1;
+    } else if ((categoria1 === "Aventura") || (categoria1 === "Rpg")){
+        percentualDesconto1 = 0.20;
+        precoDesconto1 = percentualDesconto1 * precoBase1;
+        precoComDesconto1 = precoBase1 - precoDesconto1;
+    } else if ((categoria1 === "Roguelike") || (categoria1 === "Soulslike")){
+        percentualDesconto1 = 0.32;
+        precoDesconto1 = precoBase1 * percentualDesconto1;
+        precoComDesconto1 = precoBase1 - precoDesconto1;
+    }
+
+        if ((categoria2 === "Moba") || (categoria2 === "Fps")){
+        percentualDesconto2 = 0.25;
+        precoDesconto2 = precoBase2 * percentualDesconto2;
+        precoComDesconto2 = precoBase2 - precoDesconto2;
+    } else if ((categoria2 === "Aventura") || (categoria2 === "Rpg")){
+        percentualDesconto2 = 0.20;
+        precoDesconto2 = percentualDesconto2 * precoBase2;
+        precoComDesconto2 = precoBase2 - precoDesconto2;
+    } else if ((categoria2 === "Roguelike") || (categoria2 === "Soulslike")){
+        percentualDesconto2 = 0.32;
+        precoDesconto2 = precoBase2 * percentualDesconto2;
+        precoComDesconto2 = precoBase2 - precoDesconto2;
+    }
+    
+    let juros = 0.77;
+    let precoTotal = precoComDesconto1 + precoComDesconto2 + juros;
+    alert("Nome: " + nome1 + "\n"
+        + "Categoria: " + categoria1 + "\n"
+        + "Preço: " + "R$" + precoComDesconto1.toFixed(2)
+    )
+    alert("Nome: " + nome2 + "\n"
+        + "Categoria: " + categoria2 + "\n"
+        + "Preço: " + "R$" + precoComDesconto2.toFixed(2)
+    )
+    alert("Resumo de preço: " + "R$" + precoTotal)
 }
 
 /* Tabela 
