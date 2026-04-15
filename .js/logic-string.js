@@ -124,3 +124,6 @@ function g1(){
         "\nGênero: " + genero
     )
 }
+function exemploRepeat(){
+    
+}
