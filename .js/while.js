@@ -110,3 +110,17 @@ function maiorBonificacao(){
     }
     alert(colabMaiorBoni)
 }
+function menorNome(){
+    let index = 0;
+    let menorNome = "0000000000000000000000000"
+    let quantidadeDesejada = parseInt(prompt("Num"))
+    while (index < quantidadeDesejada){
+        let nome = prompt("Digite nome").trim()
+
+        if (nome.length < menorNome.length){
+            menorNome = nome;
+        }
+        index = index + 1
+    }
+    alert("Menor Nome: " + menorNome + "\nQuantidade de caracteres: " + menorNome.length)
+}
