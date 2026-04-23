@@ -141,6 +141,163 @@ function exercicio12MostrarTabuada(){
 function exercicio13ContarLetrasNomes(){
     for(let index = 1; index <= 5; index = index + 1){
         let nome = prompt("Digite seu nome");
-        
+        console.log(nome + " tem " + nome.length)
     }
+}
+function exercicio14MaiorNumero(){
+    let maiorN = 0;
+    for(let index = 1; index <= 5; index = index + 1){
+        let number = parseInt(prompt("Digite número"));
+        if (number > maiorN){
+            maiorN = number
+        }
+    }
+    console.log(maiorN)
+}
+function exercicio15MenorNumero(){
+    let menorN = 9999;
+    for(let index = 1; index <= 5; index = index + 1){
+        let number = parseInt(prompt("Digite número"));
+        if (number < menorN){
+            menorN = number
+        }
+    }
+    console.log(menorN)
+}
+function exercicio16ContarPositivos(){
+    let maiorZero = 0;
+    for(let index = 0; index <= 5; index = index + 1){
+        let number = parseInt(prompt("Digite número"));
+        if (number > maiorZero){
+            maiorZero = maiorZero + 1
+        }
+    }
+    console.log("Quantidade números positivos: " + maiorZero)
+}
+function exercicio17SomarPares(){
+    debugger
+    for(let index = 0; index <= 5; index = index + 1){
+        let somar1 = 1;
+        let somar2 = 1;
+        let n1 = parseInt(prompt("Digite o primeiro número"));
+        if (n1 % 2 === 0){
+            somar1 = somar1 + n1 - 1
+        }
+        let n2 = parseInt(prompt("Digite o segundo número"))
+        if (n2 % 2 === 0){
+            somar2 = somar2 + n2 - 1
+        }
+        if (somar1 % 2 === 0 && somar2 % 2 === 0){
+            result = somar1 + somar2
+            console.log(somar1 + " + " + somar2 + " = " + result)
+        } else {
+            console.log("Não há números pares / Há apenas um número par")
+        }
+    }
+}
+function exercicio18MostrarMultiplosDeTres(){
+    for (let index = 1; index <= 30; index = index + 1){
+        let multiplo = index;
+        resultado = 3 * multiplo;
+        console.log(resultado)
+    }
+}
+function exercicio19CadastrarProdutos(){
+    for (let index = 1; index <= 3; index = index + 1){
+        let produto = prompt("Digite um produto")
+    }
+    console.log("Produtos cadastrados com sucesso")
+}
+function exercicio20RelatorioSimples(){
+    let somaIdade = 0;
+    let cadastrados = 0;
+    for (let index = 1; index <= 3; index = index + 1){
+        let nome = prompt("Digite seu nome");
+        let idade = parseInt(prompt("Digite sua idade"));
+        somaIdade = somaIdade + idade;
+        cadastrados = cadastrados + 1;
+    }
+    mediaIdade = somaIdade / cadastrados;
+    console.log("Número de pessoas cadastradas: " + cadastrados + 
+        "\nSoma das idades: " + somaIdade +
+        "\nMédia das idades: " + mediaIdade
+    )
+}
+function exercicio21MostrarNumerosParesIntervalo(){
+    let inicio = parseInt(prompt("Digite o número de início"))
+    let fim = parseInt(prompt("Digite o número de fim"))
+    let turnos = fim - inicio
+    let somaTotal = 0
+    for (let index = 0; index < turnos; index = index + 1){ 
+        while (somaTotal === 0){
+            if (inicio % 2 === 0){
+            console.log(inicio)
+            }
+            somaTotal = inicio + 1
+        }
+        if (somaTotal % 2 === 0){
+            console.log(somaTotal)
+        }
+        somaTotal = somaTotal + 1;
+    }
+}
+function exercicio22SomarNumerosIntervalo(){
+    debugger
+    let inicio = parseInt(prompt("Digite o número de início"))
+    let fim = parseInt(prompt("Digite o número de fim"))
+    let turnos = fim - inicio
+    let somaTotal = 0
+    let addition = somaTotal + 1
+    for (let index = 0; index < turnos; index = index + 1){
+        while (somaTotal <= 0 && addition <= 1){
+        somaTotal = inicio;
+        addition = inicio + 1;
+        }
+        somaTotal = somaTotal + addition;
+        addition = addition + 1;
+    }
+    console.log(somaTotal)
+}
+function exercicio23ContarNumerosNegativos(){
+    let quantidadeNegativo = 0;
+    for (let index = 0; index < 6; index = index + 1){
+        let numero = parseInt(prompt("Digite um número"));
+        if (numero <= -1){
+            quantidadeNegativo = quantidadeNegativo + 1;
+        }
+    }
+    console.log(quantidadeNegativo + " números negativos")
+}
+function exercicio24CalcularMediaAlturas(){
+    let totalAltura = 0.00
+    for (let index = 0; index < 5; index = index + 1){
+        let altura = parseFloat(prompt("Digite a altura da pessoa"));
+        totalAltura = totalAltura + altura;
+    }
+    mediaAltura = totalAltura / 5;
+    console.log(mediaAltura + " é a média de alturas das pessoas")
+}
+function exercicio25ContarNotasAcimaSete(){
+    let totalAcima7 = 0;
+    for (let index = 0; index < 8; index = index + 1){
+        let nota = parseInt(prompt("Digite suas notas"));
+        if (nota >= 7){
+            totalAcima7 = totalAcima7 + 1;
+        }
+    }
+    console.log("Você tem " + totalAcima7 + " notas acima da média.")
+}
+function exercicio26MaiorEMenorNumero(){
+    debugger
+    let maiorNumero = 0;
+    let menorNumero = 999;
+    for (let index = 0; index < 7; index = index + 1){
+        let numero = parseInt(prompt("Digite um número"));
+        if (numero > maiorNumero){
+            maiorNumero = numero;
+        } else if (numero < menorNumero){
+            menorNumero = numero
+        }
+    }
+    console.log("O maior número é " + maiorNumero + ", e o menor número é " + menorNumero)
 }
