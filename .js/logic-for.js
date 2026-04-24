@@ -301,3 +301,12 @@ function exercicio26MaiorEMenorNumero(){
     }
     console.log("O maior número é " + maiorNumero + ", e o menor número é " + menorNumero)
 }
+function exercicio27SomarIdadesMaioresDeIdade(){
+    let somaMaiorIdade = 0;
+    for (let index = 0; index < 5; index = index + 1){
+        let idade = parseInt(prompt("Digite a idade"));
+        if (idade >= 18){
+            somaMaiorIdade = somaMaiorIdade + idade;
+        }
+    }
+}
