@@ -419,3 +419,49 @@ function exercicio36ContarNotasEmFaixas(){
     }
     console.log("Notas\n0-4: " + zeroQuatro + "\n5-6: " + cincoSeis + "\n7-8: " + seteOito + "\n9-10: " + noveDez)
 }
+function fichario(){
+    let text = "";
+    let quantidadePaciente = parseInt(prompt("Quantos pacientes registrar?"));
+    for(let i = 0; i < quantidadePaciente; i = i + 1){
+        let nome = prompt("Digite o nome do(a) paciente");
+        let diaNasc = parseInt(prompt("Digite o dia de nascimento do(a) paciente"));
+        let mesNasc = parseInt(prompt("Digite o mês de nascimento do(a) paciente"));
+        let anoNasc = parseInt(prompt("Digite o ano de nascimento do(a) paciente"));
+        let anoAtual = new Date().getFullYear();
+        let mesAtual = new Date().getMonth();
+        let diaAtual = new Date().getDay();
+        let idade = anoAtual - anoNasc;
+        if (idade < 18 && mesNasc < mesAtual && diaNasc < diaAtual){
+            faixaEtaria = "Criança";
+        } else if (idade >= 18 && mesNasc >= mesAtual && diaNasc >= diaAtual) {
+            faixaEtaria = "Adulto(a)";
+        } else {
+            faixaEtaria = "Erro";
+        }
+        let genero = prompt("Digite o gênero do paciente\n[M] / [F] / [Outro]");
+        if (genero.toLowerCase() === "m" || genero.toLowerCase() === "homem" || genero.toLowerCase() === "masculino"){
+            generoPaciente = "Masculino"
+        } else if (genero.toLowerCase() === "f" || genero.toLowerCase() === "mulher" || genero.toLowerCase() === "feminino"){
+            generoPaciente = "Feminino"
+        } else {
+            generoPaciente = "Outro / Não-Binário"
+        }
+        let grauEmergencia = parseInt(prompt("Qual o grau de emergência do(a) paciente?\n1 - Azul / Emergência mínima\n2 - Verde / Pouca emergência\n3 - Amarelo / Média emergência\n4 - Laranja / Emergência maior\n5 - Vermelho / Alta emergência\n6 - Preto / Risco de óbito"));
+        if (grauEmergencia === 1){
+            emergencia = "Azul / Emergência mínima";
+        } else if (grauEmergencia === 2){
+            emergencia = "Verde / Pouca emergência";
+        } else if (grauEmergencia === 3){
+            emergencia = "Amarelo / Média emergência"
+        } else if (grauEmergencia === 4){
+            emergencia = "Laranja / Emergência maior"
+        } else if (grauEmergencia === 5){
+            emergencia = "Vermelho / Alta emergência"
+        } else {
+            emergencia = "Preto / Risco de óbito"
+        }
+        let descricao = prompt("Digite a descrição da condição/estado do(a) paciente");
+        text = text + "Nome: " + nome + "\nGênero: " + generoPaciente + "\nData de Nascimento: " + diaNasc + "/" + mesNasc + "/" + anoNasc + "\nIdade: " + idade + "\nFaixa etária: " + faixaEtaria + "\nGrau de emergência: " + emergencia + "\nDescrição: " + descricao + "\n--------------------------\n"
+    }
+    console.log(text)
+}
