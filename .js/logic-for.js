@@ -309,4 +309,113 @@ function exercicio27SomarIdadesMaioresDeIdade(){
             somaMaiorIdade = somaMaiorIdade + idade;
         }
     }
+    console.log("Soma das idades: " + somaMaiorIdade);
+}
+function exercicio28ContarHomensEMulheres(){
+    let homens = 0;
+    let mulheres = 0;
+    for(let index = 0; index < 6; index = index + 1){
+        let nome = prompt("Digite seu nome");
+        let genero = prompt("Digite seu gênero \n[F] / [M] / [O]");
+        if (genero.toLowerCase() === "m"){
+            homens = homens + 1;
+        } else if (genero.toLowerCase() === "f"){
+            mulheres = mulheres + 1;
+        }
+    }
+    console.log("Quantidade de homens: " + homens + "\nQuantidade de mulheres: " + mulheres)
+}
+function exercicio29ValidarNota(){
+    let somaNota = 0;
+    for(let index = 0; index < 6; index = index + 1){
+        let nota = parseInt(prompt("Digite a nota"));
+        while ((nota < 0) || (nota > 10)){
+            nota = parseInt(prompt("Nota inválida, digite a nota novamente"))
+        }
+        somaNota = somaNota + nota
+    }
+    mediaNota = somaNota / 6;
+    console.log("Média das notas \n" + mediaNota)
+}
+function exercicio30TabuadasCompletas(){
+    let numero = 1;
+    let multiplicador = 1;
+    for(let index = 0; index < 5; index = index + 1){
+        for(let index = 1; index <= 10; index = index + 1){
+        console.log(numero * multiplicador)
+        numero = numero + 1;
+        if (numero === 11 || numero === 21 || numero === 31 || numero === 41){
+            multiplicador = multiplicador + 1;
+            numero = 1;
+        }
+        }
+    }
+}
+function exercicio31ContarAprovadosReprovados(){
+    let text = "";
+    for(let index = 0; index < 6; index = index + 1){
+        let status = "Neutro";
+        nome = prompt("Digite o nome");
+        let nota = parseInt(prompt("Digite a nota"))
+        if (nota >= 7){
+            status = "Aprovado"
+        } else {
+            status = "Reprovado"
+        }
+        text = text + "Nome: " + nome + "\nNota: " + nota + "\nStatus: " + status + "\n-----------\n";
+    }
+    console.log(text)
+}
+function exercicio32SomarValoresPositivos(){
+    let soma = 0;
+    for(let index = 0; index < 8; index = index + 1){
+        let numero = parseInt(prompt("Digite número"));
+        if (numero > 0){
+            soma = soma + numero
+        }
+    }
+    console.log(soma)
+}
+function exercicio33EncontrarNomeMaisLongo(){
+    let maiorNome = "";
+    for(let index = 0; index < 6; index = index + 1){
+        let nome = prompt("Digite um nome").trim(" ");
+        if (nome.length > maiorNome.length){
+            maiorNome = nome
+        }
+    }
+    console.log("O maior nome é " + maiorNome + " com " + maiorNome.length + " letras")
+}
+function exercicio34CalcularFatorial(){
+    let numero = parseInt(prompt("Digite um número"));
+    let fatorial = 1;
+    for(let i = 1; i <= numero; i = i + 1){
+        fatorial = fatorial * i;
+    }
+    console.log(fatorial)
+}
+function exercicio35ContagemRegressivaPersonalizada(){
+    for(let i = parseInt(prompt("Digite um número")); i > 0; i = i - 1){
+        alert(i)
+    }
+    console.log("Time out")
+}
+function exercicio36ContarNotasEmFaixas(){
+    let zeroQuatro = 0;
+    let cincoSeis = 0;
+    let seteOito = 0;
+    let noveDez = 0;
+    for(let i = 0; i < 8; i = i + 1){
+        let nota = parseInt(prompt("Digite a nota"));
+        if (nota >= 0 && nota <= 4){
+            zeroQuatro = zeroQuatro + 1;
+        } else if (nota >= 5 && nota <= 6){
+            cincoSeis = cincoSeis + 1;
+        } else if (nota >= 7 && nota <= 8){
+            seteOito = seteOito + 1;
+        } else {
+            noveDez = noveDez + 1;
+        }
+    }
+    console.log("Notas\n0-4: " + zeroQuatro + "\n5-6: " + cincoSeis + "\n7-8: " + seteOito + "\n9-10: " + noveDez)
 }

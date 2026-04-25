@@ -1,13 +1,13 @@
 {
   "liveServer.settings.port": 0,
-  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreview": true,
   "editor.stickyScroll.enabled": false,
   "files.autoSave": "afterDelay",
   "editor.quickSuggestions": {
-    "comments": "off",
-    "strings": "off",
-    "other": "off"
+    "comments": "on",
+    "strings": "on",
+    "other": "on"
   },
-  "editor.suggestOnTriggerCharacters": false,
+  "editor.suggestOnTriggerCharacters": true,
   "editor.inlineSuggest.enabled": false
 }
