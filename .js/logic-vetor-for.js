@@ -112,3 +112,88 @@ function exercicio03(){
     alert(texto);
     alert("Número cadastrado: " + cidades.length)
 }
+function exercicio04(){
+    let numeros = [];
+    for(let i = 0; i < 5; i += 1){
+        let numero = parseInt(prompt("Digite 5 números"));
+        numeros.push(numero)
+    }
+    let soma = 0;
+    for(let i = 0; i < 5; i += 1){
+        soma = soma + numeros[i]
+    }
+    alert("Soma dos números: " + soma)
+}
+function exercicio05(){
+    let notas = [];
+    for(i = 0; i < 4; i += 1){
+        let nota = parseInt(prompt("Digite as 4 notas do aluno"));
+        notas.push(nota)
+    }
+    let somaNotas = 0;
+    for(i = 0; i < 4; i += 1){
+        somaNotas = somaNotas + notas[i]
+    }
+    let mediaNotas = somaNotas / 4
+    alert("Média das notas: " + mediaNotas.toFixed(2))
+}
+function exercicio06(){
+    let produtos = [];
+    for(let i = 0; i < 4; i += 1){
+        let produto = prompt("Digite 4 produtos");
+        produtos.push(produto)
+    }
+    alert("- " + produtos[0] +
+        "\n- " + produtos[1] +
+        "\n- " + produtos[2] +
+        "\n- " + produtos[3]
+    )
+    produtos[2] = prompt("Edite o terceiro produto");
+    alert("- " + produtos[0] +
+        "\n- " + produtos[1] +
+        "\n- " + produtos[2] +
+        "\n- " + produtos[3]
+    )
+}
+function exercicio07(){
+    let temperaturas = [];
+    for(let i = 0; i < 5; i += 1){
+        let temperatura = parseInt(prompt("Digite uma temperatura"));
+        temperaturas.push(temperatura);
+    }
+    let maiorTemp = 0;
+    for(let i = 0; i < 5; i += 1){
+        if (temperaturas[i] > maiorTemp){
+            maiorTemp = temperaturas[i]
+        }
+    }
+    alert("Maior temperatura: " + maiorTemp + "C")
+}
+function exercicio08(){
+    let precos = [];
+    for(let i = 0; i < 4; i += 1){
+        let preco = parseFloat(prompt("Digite um preço"));
+        precos.push(preco);
+    }
+    let menorPreco = 99999;
+    for(let i = 0; i < 4; i += 1){
+        if (precos[i] < menorPreco){
+            menorPreco = precos[i]
+        }
+    }
+    alert("Menor preço: R$" + menorPreco)
+}
+function exercicio09(){
+    let numeros = [];
+    for(let i = 0; i < 6; i += 1){
+        let numero = parseFloat(prompt("Digite um número"));
+        numeros.push(numero);
+    }
+    let pares = 0;
+    for(let i = 0; i < 6; i += 1){
+        if (numeros[i] % 2 == 0){
+            pares = pares + 1
+        }
+    }
+    alert("Há " + pares + " pares")
+}
